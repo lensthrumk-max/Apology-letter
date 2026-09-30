@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Apology letter 💗</title>
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        :root {
+            --pink: #ffd8e8;
+            --light-pink: #fff1f7;
+            --medium-pink: #ffb6d2;
+            --dark-pink: #df3d72;
+            --deep-pink: #b52b59;
+            --text: #7d4058;
+            --white: #ffffff;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffdce9,
+                    #fff2f7,
+                    #ffc9df
+                );
+
+            font-family:
+                "Trebuchet MS",
+                Arial,
+                sans-serif;
+
+            overflow: hidden;
+        }
+
+
+        /* =====================================================
+           MAIN PHONE
+        ====================================================== */
+
+        .app {
+
+            width: min(100vw, 430px);
+
+            height: min(100vh, 850px);
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffeef5,
+                    #ffd2e3
+                );
+        }
+
+
+        /* =====================================================
+           EACH SCREEN
+        ====================================================== */
+
+        .screen {
+
+            position: absolute;
+
+            inset: 0;
+
+            display: none;
+
+            padding: 18px;
+        }
+
+
+        .screen.active {
+
+            display: flex;
+
+            animation: screenIn 0.4s ease;
+        }
+
+
+        @keyframes screenIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* =====================================================
+           CARD
+        ====================================================== */
+
+        .card {
+
+            position: relative;
+
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 25px 20px;
+
+            overflow: hidden;
+
+            background:
+                rgba(255, 249, 252, 0.94);
+
+            border:
+                2px solid #f0a5c0;
+
+            border-radius: 28px;
+
+            box-shadow:
+                0 15px 40px
+                rgba(165, 54, 94, 0.15);
+        }
+
+
+        /* Decorative hearts */
+
+        .card::before {
+
+            content: "♡";
+
+            position: absolute;
+
+            top: 20px;
+            left: 20px;
+
+            font-size: 32px;
+
+            color: #ed6695;
+
+            opacity: 0.65;
+        }
+
+
+        .card::after {
+
+            content: "✦";
+
+            position: absolute;
+
+            top: 55px;
+            right: 25px;
+
+            font-size: 28px;
+
+            color: #ed6695;
+
+            opacity: 0.65;
+        }
+
+
+        /* =====================================================
+           BADGE
+        ====================================================== */
+
+        .badge {
+
+            padding: 8px 15px;
+
+            margin-bottom: 15px;
+
+            color: #c93668;
+
+            background: #ffe0ec;
+
+            border: 1px dashed #e46791;
+
+            border-radius: 25px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+        }
+
+
+        /* =====================================================
+           IMAGE AREA
+        ====================================================== */
+
+        .photoWrap {
+
+            width: 235px;
+
+            height: 235px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 8px;
+
+            margin-bottom: 18px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 8px 25px
+                rgba(164, 61, 97, 0.16);
+
+            overflow: hidden;
+        }
+
+
+        .photo {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: contain;
+
+            border-radius: 50%;
+        }
+
+
+        /* =====================================================
+           TEXT
+        ====================================================== */
+
+        .title {
+
+            margin: 8px 0 17px;
+
+            color: var(--dark-pink);
+
+            font-size: 30px;
+
+            line-height: 1.15;
+
+            font-weight: 900;
+        }
+
+
+        .title.big {
+
+            font-size: 36px;
+        }
+
+
+        .text {
+
+            max-width: 320px;
+
+            color: var(--text);
+
+            font-size: 16px;
+
+            line-height: 1.6;
+        }
+
+
+        .sparkles {
+
+            margin: 5px 0;
+
+            color: #ef6090;
+
+            font-size: 25px;
+
+            letter-spacing: 10px;
+        }
+
+
+        /* =====================================================
+           BUTTONS
+        ====================================================== */
+
+        .buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            margin-top: 22px;
+        }
+
+
+        button {
+
+            min-width: 120px;
+
+            padding: 13px 25px;
+
+            border: none;
+
+            border-radius: 28px;
+
+            color: white;
+
+            background: var(--dark-pink);
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 4px 0 var(--deep-pink);
+
+            transition: 0.2s;
+        }
+
+
+        button:hover {
+
+            transform: translateY(-2px);
+        }
+
+
+        button:active {
+
+            transform: translateY(2px);
+
+            box-shadow:
+                0 2px 0 var(--deep-pink);
+        }
+
+
+        button.no {
+
+            background: #f39ab8;
+
+            box-shadow:
+                0 4px 0 #ca6a8c;
+        }
+
+
+        button.back {
+
+            min-width: auto;
+
+            padding: 9px 15px;
+
+            color: #704056;
+
+            background: #eeeeee;
+
+            box-shadow: none;
+        }
+
+
+        /* =====================================================
+           ANGRY SCREEN
+        ====================================================== */
+
+        .angry-symbol {
+
+            margin-bottom: 5px;
+
+            font-size: 38px;
+        }
+
+
+        /* =====================================================
+           LETTER
+        ====================================================== */
+
+        .letter {
+
+            width: min(330px, 100%);
+
+            padding: 24px 20px;
+
+            color: #704052;
+
+            background: #fffdf7;
+
+            border: 1px solid #ead0d7;
+
+            border-radius: 5px;
+
+            box-shadow:
+                0 8px 22px
+                rgba(158, 65, 98, 0.13);
+
+            text-align: left;
+
+            line-height: 1.6;
+
+            transform: rotate(-1deg);
+        }
+
+
+        .letter p {
+
+            margin-bottom: 12px;
+        }
+
+
+        .letter .from {
+
+            margin-top: 15px;
+
+            text-align: right;
+
+            color: #c63869;
+
+            font-weight: bold;
+        }
+
+
+        /* =====================================================
+           BIRTHDAY
+        ====================================================== */
+
+        .birthday-box {
+
+            width: 100%;
+
+            padding: 25px 15px;
+
+            background:
+                linear-gradient(
+                    #fff2f7,
+                    #ffd2e4
+                );
+
+            border:
+                2px solid #f2a1bf;
+
+            border-radius: 22px;
+        }
+
+
+        .cake {
+
+            margin: 12px 0;
+
+            font-size: 80px;
+        }
+
+
+        /* =====================================================
+           SURPRISE MENU
+        ====================================================== */
+
+        .gift-grid {
+
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 12px;
+
+            margin-top: 20px;
+        }
+
+
+        .gift {
+
+            padding: 20px 8px;
+
+            background: #fff0f6;
+
+            border:
+                2px solid #ef9cba;
+
+            border-radius: 17px;
+
+            color: #c73568;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+
+        .gift:hover {
+
+            transform: scale(1.04);
+        }
+
+
+        .gift-icon {
+
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-size: 45px;
+        }
+
+
+        /* =====================================================
+           FLOWERS
+        ====================================================== */
+
+        .flower-box {
+
+            width: 100%;
+
+            padding: 30px 15px;
+
+            background: #ffd5e5;
+
+            border:
+                2px solid #ef9cba;
+
+            border-radius: 20px;
+        }
+
+
+        .flower-emoji {
+
+            margin-bottom: 15px;
+
+            font-size: 75px;
+        }
+
+
+        /* =====================================================
+           COUPONS
+        ====================================================== */
+
+        .coupon-grid {
+
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 10px;
+
+            margin-top: 17px;
+        }
+
+
+        .coupon {
+
+            min-height: 105px;
+
+            padding: 15px 7px;
+
+            color: #c43267;
+
+            background: white;
+
+            border:
+                3px dashed #e35e89;
+
+            border-radius: 13px;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+
+        .coupon:hover {
+
+            transform: scale(1.03);
+        }
+
+
+        .coupon small {
+
+            display: block;
+
+            margin-top: 6px;
+
+            color: #9b5b73;
+        }
+
+
+        /* =====================================================
+           MEMORIES
+        ====================================================== */
+
+        .memories {
+
+            width: 100%;
+
+            height: 350px;
+
+            position: relative;
+
+            background: #ffe7f0;
+
+            border:
+                2px solid #efa0bd;
+
+            border-radius: 20px;
+        }
+
+
+        .memory {
+
+            position: absolute;
+
+            width: 105px;
+
+            padding: 7px;
+
+            background: white;
+
+            box-shadow:
+                0 6px 13px
+                rgba(128, 54, 80, 0.15);
+        }
+
+
+        .memory img {
+
+            width: 100%;
+
+            height: 85px;
+
+            display: block;
+
+            object-fit: cover;
+        }
+
+
+        .memory.one {
+
+            left: 10px;
+
+            top: 20px;
+
+            transform: rotate(-8deg);
+        }
+
+
+        .memory.two {
+
+            right: 10px;
+
+            top: 30px;
+
+            transform: rotate(8deg);
+        }
+
+
+        .memory.three {
+
+            left: 42px;
+
+            bottom: 20px;
+
+            transform: rotate(6deg);
+        }
+
+
+        .memory.four {
+
+            right: 35px;
+
+            bottom: 28px;
+
+            transform: rotate(-7deg);
+        }
+
+
+        /* =====================================================
+           FINAL WISH
+        ====================================================== */
+
+        .wish {
+
+            width: 100%;
+
+            padding: 20px;
+
+            color: #704056;
+
+            background: #fff1f7;
+
+            border:
+                2px solid #efa0bd;
+
+            border-radius: 18px;
+
+            text-align: left;
+
+            line-height: 1.6;
+        }
+
+
+        .wish p {
+
+            margin-bottom: 12px;
+        }
+
+
+        .love {
+
+            text-align: center;
+
+            color: #d53469;
+
+            font-weight: bold;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ====================================================== */
+
+        .nav {
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-top: 17px;
+        }
+
+
+        .small {
+
+            margin-top: 12px;
+
+            color: #a65a75;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-height: 700px) {
+
+            .photoWrap {
+
+                width: 175px;
+
+                height: 175px;
+            }
+
+            .title {
+
+                font-size: 26px;
+            }
+
+            .card {
+
+                padding: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <!-- =====================================================
+         SCREEN 1
+         MAIN SURPRISE
+    ====================================================== -->
+
+    <section class="screen active" id="s1">
+
+        <div class="card">
+
+            <div class="badge">
+                💗 SOMETHING FOR YOU 💗
+            </div>
+
+
+            <!-- =================================================
+                 IMAGE 1
+                 PUT YOUR FLOWER CAT HERE
+
+                 Example:
+                 images/flower-cat.jpg
+            ================================================== -->
+
+            <div class="photoWrap">
+
+                <img
+                    class="photo"
+                    src="Cute Cat Holding Flowers PNG _ Adorable Kawaii Kitty Sticker 🌷🐱.jpg"
+                    alt="Cat holding flowers"
+                >
+
+            </div>
+
+
+            <div class="sparkles">
+                ♡ ✦ ♡
+            </div>
+
+
+            <h1 class="title">
+
+                I HAVE A<br>
+                SURPRISE FOR YOU
+
+            </h1>
+
+
+            <p class="text">
+
+                Do you wanna see it? 🥺💗
+
+            </p>
+
+
+            <div class="buttons">
+
+                <button onclick="goTo(3)">
+                    YES 💗
+                </button>
+
+
+                <button
+                    class="no"
+                    onclick="goTo(2)"
+                >
+                    NO ×
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SCREEN 2
+         HOW DARE YOU
+    ====================================================== -->
+
+    <section class="screen" id="s2">
+
+        <div class="card">
+
+            <div class="angry-symbol">
+                😾💢
+            </div>
+
+
+            <!-- =================================================
+                 IMAGE 2
+                 PUT YOUR ANGRY CAT HERE
+
+                 Example:
+                 images/angry-cat.jpg
+            ================================================== -->
+
+            <div class="photoWrap">
+
+                <img
+                    class="photo"
+                    src="Stylish Laptop Stickers Aesthetic Designs for Printable Crafts.jpg""
+                    alt="Angry cat"
+                >
+
+            </div>
+
+
+            <div class="sparkles">
+                💢 ✦ 💢
+            </div>
+
+
+            <h1 class="title big">
+
+                WHATTTTTT ?!
+
+            </h1>
+
+
+            <p class="text">
+
+                NO DABADIYAAAAA! 😭<br>
+                Teri aisi ki taisi
+
+            </p>
+
+
+            <button
+                style="margin-top:22px"
+                onclick="goTo(1)"
+            >
+
+                TRY AGAIN ↻
+
+            </button>
+
+
+            <p class="small">
+
+                Go press yes againn ... 
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SCREEN 3
+         YES / LETTER
+    ====================================================== -->
+
+    <section class="screen" id="s3">
+
+        <div class="card">
+
+            <div class="badge">
+                💌 FOR CUTU MUTU💌
+            </div>
+
+
+            <!-- =================================================
+                 IMAGE 3
+                 OPTIONAL IMAGE
+
+                 Example:
+                 images/photo1.jpg
+            ================================================== -->
+
+            <div class="photoWrap">
+
+                <img
+                    class="photo"
+                    src="download (8).jpg"
+                    alt="Special photo"
+                >
+
+            </div>
+
+
+            <div class="letter">
+
+                <p>
+                    Hey Cutie! 💗
+                </p>
+
+
+                <p>
+                    A very special gift, for a very special person, from a very 
+                    special person!  
+
+                </p>
+
+
+                <p>
+                    Keep goin darling...
+                    MORE GIFTS AWAITING FOR YOU 
+                  . 💕
+                </p>
+
+
+                <p class="from">
+                    — with lots of love ♡
+                </p>
+
+            </div>
+
+
+            <button
+                style="margin-top:20px"
+                onclick="goTo(4)"
+            >
+
+                Click here 
+                for surprises ✨
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <section class="screen" id="s4">
+
+        <div class="card">
+
+            <div class="birthday-box">
+
+                <div class="sparkles">
+                    ✦ ♡ ✦
+                </div>
+
+
+                <h1 class="title">
+
+                    I Am <br>
+                     SORRY 😔
+
+                </h1>
+
+
+                <div class="cake">
+                    😔
+                </div>
+
+
+                <p class="text">
+
+                    This all for you. 💗
+
+                </p>
+
+            </div>
+
+
+            <button
+                style="margin-top:20px"
+                onclick="goTo(5)"
+            >
+
+                SEE YOUR SURPRISES →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="screen" id="s5">
+
+        <div class="card">
+
+            <h1 class="title">
+
+                OPEN YOUR<br>
+                SURPRISES 🎁
+
+            </h1>
+
+
+            <p class="text">
+
+                There are little things waiting
+                for you.😋 Tap each one. 💕
+
+            </p>
+
+
+            <div class="gift-grid">
+
+
+                <div
+                    class="gift"
+                    onclick="goTo(6)"
+                >
+
+                    <span class="gift-icon">
+                        💐
+                    </span>
+
+                    <b>
+                        Flowers
+                    </b>
+
+                </div>
+
+
+                <div
+                    class="gift"
+                    onclick="goTo(7)"
+                >
+
+                    <span class="gift-icon">
+                        🎟️
+                    </span>
+
+                    <b>
+                        Coupons
+                    </b>
+
+                </div>
+
+
+                <div
+                    class="gift"
+                    onclick="goTo(8)"
+                >
+
+                    <span class="gift-icon">
+                        📸
+                    </span>
+
+                    <b>
+                        Memories
+                    </b>
+
+                </div>
+
+
+                <div
+                    class="gift"
+                    onclick="goTo(9)"
+                >
+
+                    <span class="gift-icon">
+                        💌
+                    </span>
+
+                    <b>
+                         Wish
+                    </b>
+
+                </div>
+
+
+            </div>
+
+
+            <p class="small">
+
+                You can open them as you want. ♡
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="screen" id="s6">
+
+        <div class="card">
+
+            <h1 class="title">
+
+                FLOWERS FOR YOU 🌷
+
+            </h1>
+
+
+            <div class="flower-box">
+
+                <div class="flower-emoji">
+                    💐🌷🌸🌹
+                </div>
+
+
+                <p class="text">
+
+                    A lots of flowers for my flower 🙁
+                    one flower could never be enough
+                    for you.you my whole garden, my fav flower 🤭💗
+
+                </p>
+
+            </div>
+
+
+            <div class="nav">
+
+                <button
+                    class="back"
+                    onclick="goTo(5)"
+                >
+                    ← Back
+                </button>
+
+
+                <button
+                    onclick="goTo(7)"
+                >
+                    Next →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="screen" id="s7">
+
+        <div class="card">
+
+            <h1 class="title">
+
+                LOVE<br>
+                COUPONS 🎟️
+
+            </h1>
+
+
+            <p class="text">
+
+                Valid forever.
+                No expiry date. 💗
+
+            </p>
+
+
+            <div class="coupon-grid">
+
+
+                <div
+                    class="coupon"
+                    onclick="redeem(this)"
+                >
+
+                    😛<br>
+
+                    <b>
+                        MY YAPS
+                    </b>
+
+                    <small>
+                        Any yaps or talks you wanna listen, your choice👅
+                    </small>
+
+                </div>
+
+
+                <div
+                    class="coupon"
+                    onclick="redeem(this)"
+                >
+
+                    💞<br>
+
+                    <b>
+                        UNLIMITED LOVE 
+                    </b>
+
+                    <small>
+                        Never ending love for my chapar ganju.🤗
+                    </small>
+
+                </div>
+
+
+                <div
+                    class="coupon"
+                    onclick="redeem(this)"
+                >
+
+                    🤗<br>
+
+                    <b>
+                        YOUR WISH
+                    </b>
+
+                    <small>
+                        Any wish you wanna make cutu mutu.
+                    </small>
+
+                </div>
+
+
+                <div
+                    class="coupon"
+                    onclick="redeem(this)"
+                >
+
+                    🍽️<br>
+
+                    <b>
+                        FOOF OF YOUR CHOICE!
+                    </b>
+
+                    <small>
+                        Just ask
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="nav">
+
+                <button
+                    class="back"
+                    onclick="goTo(5)"
+                >
+                    ← Back
+                </button>
+
+
+                <button
+                    onclick="goTo(8)"
+                >
+                    Next →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="screen" id="s8">
+
+        <div class="card">
+
+            <h1 class="title">
+
+                THE BEST 📸
+
+            </h1>
+
+
+            <div class="memories">
+
+
+                <!-- IMAGE 4 -->
+
+                <div class="memory one">
+
+                    <img
+                        src="1 pic.jpg"
+                        alt="Memory 1"
+                    >
+
+                </div>
+
+
+            
+
+                <div class="memory two">
+
+                    <img
+                        src="2 pic.jpg"
+                        alt="Memory 2"
+                    >
+
+                </div>
+
+
+          
+
+                <div class="memory three">
+
+                    <img
+                        src="3 pic.jpg"
+                        alt="Memory 3"
+                    >
+
+                </div>
+
+
+            
+
+                <div class="memory four">
+
+                    <img
+                        src="4 pic.jpg"
+                        alt="Memory 4"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+            <div class="nav">
+
+                <button
+                    class="back"
+                    onclick="goTo(5)"
+                >
+                    ← Back
+                </button>
+
+
+                <button
+                    onclick="goTo(9)"
+                >
+                    CLICK HERE  →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="screen" id="s9">
+
+        <div class="card">
+
+
+  
+
+            <div class="photoWrap">
+
+                <img
+                    class="photo"
+                    src="download (9).jpg"
+                    alt="Final photo"
+                >
+
+            </div>
+
+
+            <h1 class="title">
+
+               MY APOLOGY LETTER 👉🏻👈🏻
+
+            </h1>
+
+
+            <div class="wish">
+
+                <p>
+                    My loml,
+                </p>
+
+
+                <p>
+
+                    I know that you do not neeed any sorry nor my Apology
+                    but as a beautiful,kind,pretty girl i cant see you like that 
+                    so i made this very cutu cutu surprise for you with my very 
+                    beautiful hands ( kamar thakgyi 😡)
+                </p>
+
+
+                <p>
+
+                  well you know you love me lot 😋
+                  and i love you lots too. i know i disappointed you, i made a 
+                  mistake i know ! but we both know that disappointment happens
+                but i will never give up on you. NO MATTER WHAT! 
+                </p>
+
+
+                <p>
+
+                    I AM REALLY SORRY FOR EVERYTHING😔💗
+                  
+
+                </p>
+
+
+                <p class="love">
+
+                    YOU WILL ALWAYS LOVE ME THANKS!😋
+                    I love you. ❤️
+
+                </p>
+
+            </div>
+
+
+            <button
+                style="margin-top:16px"
+                onclick="goTo(1)"
+            >
+
+                ↻ REPLAY
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+<script>
+
+
+
+
+    function goTo(screenNumber) {
+
+        const screens =
+            document.querySelectorAll(".screen");
+
+
+        screens.forEach(function(screen) {
+
+            screen.classList.remove("active");
+
+        });
+
+
+        const nextScreen =
+            document.getElementById(
+                "s" + screenNumber
+            );
+
+
+        if (nextScreen) {
+
+            nextScreen.classList.add("active");
+
+        }
+
+    }
+
+
+
+
+    function redeem(element) {
+
+        element.style.transform =
+            "scale(0.95)";
+
+        setTimeout(function() {
+
+            element.style.transform =
+                "scale(1)";
+
+        }, 200);
+
+    }
+
+
+</script>
+
+
+</body>
+
+</html>
